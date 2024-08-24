@@ -29,13 +29,6 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     python -m pip install virtualenv
     ```
 
-- **Biblioteca Python Dotenv**
-
-  Este projeto utiliza a biblioteca `python-dotenv` para carregar as configurações do arquivo `.env`. Instale-a com o comando:
-
-  ```bash
-  pip install python-dotenv
-  ```
 
 ### Passos para Executar
 
@@ -61,15 +54,21 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     ```bash
     pip install django==4.2.15 python-dotenv
     ```
+    
+-5. **Instale a Biblioteca Python Dotenv**:
 
-5. **Crie o arquivo `.env` manualmente no diretório root do projeto e adicione as configurações variáveis a seguir**:
+  Este projeto utiliza a biblioteca `python-dotenv` para carregar as configurações do arquivo `.env`. Instale-a com o comando:
+
+  ```bash
+  pip install python-dotenv
+  ```
+
+6. **Crie o arquivo `.env` manualmente no diretório root do projeto e adicione as configurações variáveis a seguir**:
 
     Crie um arquivo chamado `.env` na raiz do projeto e adicione:
 
-    ```plaintext
-    SECRET_KEY=sua_chave_secreta_aqui
-    DEBUG=True
-    ```
+    
+7. **Configurando as variáveis**:
 
     Para gerar uma `SECRET_KEY`, execute o seguinte comando no terminal:
 
@@ -77,12 +76,35 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
     ```
 
-    Copie e cole a senha gerada no arquivo .env
+    Copie e cole a senha gerada no local indicado abaixo no seu arquivo .env:
+   
+   ```plaintext
+    SECRET_KEY=sua_chave_secreta_aqui
+    ```
 
 6. **Execute o servidor de desenvolvimento**:
     ```bash
     python manage.py runserver
     ```
+    
+### Configurações do settings.py para usar SECRET_KEY do arquivo .env
+
+  Adicione o seguinte código no início do arquivo `settings.py` para carregar a `SECRET_KEY` do arquivo `.env`:
+  
+  ```python
+  import os
+  from pathlib import Path
+  from dotenv import load_dotenv
+  
+  # Caminho base do projeto
+  BASE_DIR = Path(__file__).resolve().parent.parent
+  
+  # Carregar variáveis do arquivo .env
+  load_dotenv()
+  
+  # Segurança
+  SECRET_KEY = os.getenv('SECRET_KEY')
+  ```
 
 ### Estrutura de Diretórios do Projeto
 
