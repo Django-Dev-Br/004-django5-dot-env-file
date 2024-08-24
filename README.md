@@ -52,7 +52,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 4. **Instale o Django e outras dependências**:
     ```bash
-    pip install django==4.2.15 python-dotenv
+    pip install django==4.2.15 
     ```
     
 -5. **Instale a Biblioteca Python Dotenv**:
