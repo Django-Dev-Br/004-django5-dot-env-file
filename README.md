@@ -47,7 +47,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 3. **Ative o ambiente virtual criado**:
     ```bash
     source myvenv/bin/activate  # Linux
-    myvenv\Scriptsctivate  # Windows
+    myvenv\Scripts\activate  # Windows
     ```
 
 4. **Instale o Django e outras dependências**:
