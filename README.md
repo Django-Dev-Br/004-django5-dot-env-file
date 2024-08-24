@@ -63,12 +63,14 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
   pip install python-dotenv
   ```
 
-6. **Crie o arquivo `.env` manualmente no diretório root do projeto e adicione as configurações variáveis a seguir**:
+6. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
 
-    Crie um arquivo chamado `.env` na raiz do projeto e adicione:
-
-    
-7. **Configurando as variáveis**:
+    ```bash
+    touch .env  # Linux
+    echo. > .env  # Windows
+    ```
+   
+8. **Adicione ao .env as configurações variáveis a seguir**:
 
     Para gerar uma `SECRET_KEY`, execute o seguinte comando no terminal:
 
