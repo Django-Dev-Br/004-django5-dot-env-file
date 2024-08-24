@@ -73,7 +73,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     Para gerar uma `SECRET_KEY`, execute o seguinte comando no terminal:
 
     ```bash
-    python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+    python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
     ```
 
     Copie e cole a senha gerada no local indicado abaixo no seu arquivo .env:
