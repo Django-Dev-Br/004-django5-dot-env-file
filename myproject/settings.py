@@ -10,9 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import os
+# Facilita o trabalho com caminhos de arquivos e diretórios.
 from pathlib import Path
+
+# Usado para interagir com o sistema operacional, especificamente para recuperar variáveis de ambiente.
+import os
+
 from dotenv import load_dotenv
+
+# Carrega as variáveis de ambiente definidas no arquivo .env.
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
