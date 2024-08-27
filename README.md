@@ -88,7 +88,10 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     ```bash
     python manage.py runserver
     ```
-    
+     Após executar o servidor de desenvolvimento, você pode acessar o Django no seguinte endereço:
+
+      [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
 ### Configurações do settings.py para usar SECRET_KEY do arquivo .env
 
   Adicione o seguinte código no início do arquivo `settings.py` para carregar a `SECRET_KEY` do arquivo `.env`:
