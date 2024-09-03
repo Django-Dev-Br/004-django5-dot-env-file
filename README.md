@@ -35,7 +35,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 1. **Clone o repositório**:
     ```bash
     git clone https://github.com/Django-Dev-Br/004-django-4-dot-env-file.git
-    cd 004-django-4-dot-env-file
+  
     ```
 
 2. **Crie um ambiente virtual**:
@@ -55,7 +55,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     pip install django==4.2.15 
     ```
     
--5. **Instale a Biblioteca Python Dotenv**:
+5. **Instale a Biblioteca Python Dotenv**:
 
   Este projeto utiliza a biblioteca `python-dotenv` para carregar as configurações do arquivo `.env`. Instale-a com o comando:
 
@@ -63,7 +63,12 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
   pip install python-dotenv
   ```
 
-6. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
+6. **Acesse a Pasta do Projeto**:
+    ```bash
+    cd 004-django-4-dot-env-file
+    ```
+
+7. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
 
     ```bash
     touch .env  # Linux
