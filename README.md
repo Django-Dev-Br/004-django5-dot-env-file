@@ -9,25 +9,14 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 ### Requisitos
 
-- **Python 3.12**  
+- **Python 3.12 com PIP e venv**
+
+- **No [repositório anterior](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
+
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
   Confira o vídeo para saber como trabalhar com múltiplas versões do Python e com venv (ambiente virtual):  
   [![Watch the video](https://img.youtube.com/vi/eetDeQrv0Rs/0.jpg)](https://youtu.be/eetDeQrv0Rs)
-
-- **Virtualenv**
-
-  Para instalar o pacote `virtualenv` no Python, utilize os seguintes comandos:
-
-  - **Linux**:
-    ```bash
-    python3 -m pip install virtualenv
-    ```
-
-  - **Windows**:
-    ```bash
-    python -m pip install virtualenv
-    ```
 
 
 ### Passos para Executar
@@ -39,19 +28,30 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     ```
 
 2. **Crie um ambiente virtual**:
+   
+    **Windows**
     ```bash
-    python3 -m venv myvenv  # Linux
-    python -m venv myvenv  # Windows
+     python -m venv myvenv  
+    ```
+   **Linux**
+    ```bash
+     python3 -m venv myvenv  
     ```
 
 3. **Ative o ambiente virtual criado**:
-    ```bash
-    source myvenv/bin/activate  # Linux
-    myvenv\Scripts\activate  # Windows
+   
+    **Windows**
+    ```python
+    myvenv\Scripts\activate  
+    ```
+
+   **Linux**
+    ```python
+    source myvenv/bin/activate  
     ```
 
 4. **Instale o Django e outras dependências**:
-    ```bash
+    ```python
     pip install django==4.2.15 
     ```
     
@@ -70,9 +70,14 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 7. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
 
-    ```bash
-    touch .env  # Linux
-    echo. > .env  # Windows
+    **Linux**
+    ```python
+    touch .env  
+    ```
+    
+    **Windows**
+    ```python
+    echo. > .env  
     ```
    
 8. **Adicione ao .env as configurações variáveis a seguir**:
@@ -90,7 +95,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     ```
 
 6. **Execute o servidor de desenvolvimento**:
-    ```bash
+    ```python
     python manage.py runserver
     ```
      Após executar o servidor de desenvolvimento, você pode acessar o Django no seguinte endereço:
@@ -112,7 +117,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
   # Carregar variáveis do arquivo .env
   load_dotenv()
   
-  # Segurança
+  # Substitua a linha de código na qual está a SECRET_KEY por esta:
   SECRET_KEY = os.getenv('SECRET_KEY')
   ```
 
@@ -136,7 +141,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 Se desejar criar seu próprio projeto Django, use o seguinte comando após criar e ativar a virtual env e instalar o django nela, conforme orientações acima:
 
-```bash
+```python
 django-admin startproject myproject
 ```
 
