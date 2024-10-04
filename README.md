@@ -1,5 +1,5 @@
 
-# 004 Django 4 .env Example
+# 004 Django 5 - Arquivo .env 
 
 ### O que é e para que serve o arquivo .env?
 
@@ -10,8 +10,9 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 ### Requisitos
 
 - **Python 3.12 com PIP e venv**
+- **o Django 5 requer Python 3.10 ou superior.**
 
-- **No [repositório 001](https://github.com/Django-Dev-Br/001-django4-basic-project) há explicações sobre PIP e venv**
+- **No [repositório 001](https://github.com/Django-Dev-Br/001-django5-basic-project) há explicações sobre PIP e venv**
 
   [Baixar Python 3.12](https://www.python.org/downloads/release/python-3122/)
 
@@ -50,10 +51,28 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     source myvenv/bin/activate  
     ```
 
-4. **Instale o Django e outras dependências**:
-    ```python
-    pip install django==4.2.15 
+4. **Instale o Django**:
+
+   Fazer a instalação após a ativação da virtual env fará com que a instalação seja feita nessa pasta ao invés do computador. Isso significa que o pacote Django não estará disponivel para todos os usuários do computador, mas apenas para o contexto no qual essa venv esteja ativada. Veremos sua ativação logo abaixo.
+
+    **Instalação manualmente via gerenciador de dependências PIP**
+    ```bash
+    pip install django
     ```
+    - use, preferencialmente, a versão 5.1. Para tanto, execute o comando:
+
+     ```bash
+    pip install  "django>=5.1,<=5.2"
+    ```
+
+    ----- **OU** -----
+
+    **Instalação via arquivo requirements**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    O arquivo requirements.txt é um arquivo de texto que contém uma lista de pacotes a ser instalado em uma venv. É uma boa prática de programação do ecossistema Python.
+
     
 5. **Instale a Biblioteca Python Dotenv**:
 
@@ -65,7 +84,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 6. **Acesse a Pasta do Projeto**:
     ```bash
-    cd 004-django-4-dot-env-file
+    cd 004-django5-dot-env-file
     ```
 
 7. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
@@ -124,7 +143,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 ### Estrutura de Diretórios do Projeto
 
 ```
-004-django4-env-example/
+004-django5-env-example/
 ├── .env                  # Arquivo contendo a SECRET_KEY e DEBUG=True
 ├── .gitignore            # Arquivo que especifica quais arquivos e diretórios o Git deve ignorar
 ├── myproject/
