@@ -126,17 +126,21 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
   Adicione o seguinte código no início do arquivo `settings.py` para carregar a `SECRET_KEY` do arquivo `.env`:
   
   ```python
+  # Usado para interagir com o sistema operacional, especificamente para recuperar variáveis de ambiente.
   import os
+  # Facilita o trabalho com caminhos de arquivos e diretórios.
   from pathlib import Path
+  
   from dotenv import load_dotenv
   
-  # Caminho base do projeto
-  BASE_DIR = Path(__file__).resolve().parent.parent
-  
-  # Carregar variáveis do arquivo .env
+  # Carrega as variáveis de ambiente definidas no arquivo .env.
   load_dotenv()
   
-  # Substitua a linha de código na qual está a SECRET_KEY por esta:
+  # Build paths inside the project like this: BASE_DIR / 'subdir'.
+  BASE_DIR = Path(__file__).resolve().parent.parent
+  
+  
+  # SECURITY WARNING: keep the secret key used in production secret!
   SECRET_KEY = os.getenv('SECRET_KEY')
   ```
 
