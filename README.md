@@ -24,7 +24,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 
 1. **Clone o repositório**:
     ```bash
-    git clone https://github.com/Django-Dev-Br/004-django-4-dot-env-file.git
+    git clone https://github.com/Django-Dev-Br/004-django5-dot-env-file.git
   
     ```
 
