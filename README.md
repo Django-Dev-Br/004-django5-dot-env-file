@@ -51,7 +51,13 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     source myvenv/bin/activate  
     ```
 
-4. **Instale o Django**:
+4. **Acesse a Pasta do Projeto**:
+   
+    ```bash
+    cd 004-django5-dot-env-file
+    ```
+    
+5. **Instale o Django**:
 
    Fazer a instalação após a ativação da virtual env fará com que a instalação seja feita nessa pasta ao invés do computador. Isso significa que o pacote Django não estará disponivel para todos os usuários do computador, mas apenas para o contexto no qual essa venv esteja ativada. Veremos sua ativação logo abaixo.
 
@@ -74,18 +80,13 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     O arquivo requirements.txt é um arquivo de texto que contém uma lista de pacotes a ser instalado em uma venv. É uma boa prática de programação do ecossistema Python.
 
     
-5. **Instale a Biblioteca Python Dotenv**:
+6. **Instale a Biblioteca Python Dotenv**:
 
   Este projeto utiliza a biblioteca `python-dotenv` para carregar as configurações do arquivo `.env`. Instale-a com o comando:
 
   ```bash
   pip install python-dotenv
   ```
-
-6. **Acesse a Pasta do Projeto**:
-    ```bash
-    cd 004-django5-dot-env-file
-    ```
 
 7. **Crie o arquivo `.env` manualmente no diretório root do projeto**:
 
@@ -113,7 +114,8 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
     SECRET_KEY=sua_chave_secreta_aqui
     ```
 
-6. **Execute o servidor de desenvolvimento**:
+9. **Execute o servidor de desenvolvimento**:
+    
     ```python
     python manage.py runserver
     ```
