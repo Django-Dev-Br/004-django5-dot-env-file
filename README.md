@@ -159,6 +159,7 @@ O arquivo .env é um arquivo de texto simples que armazena variáveis de ambient
 │   ├── urls.py           # Mapeamento de requisições HTTP e redirecionamento para os templates HTML
 │   └── wsgi.py           # Configurações para o servidor WSGI (usado para servir a aplicação)
 └── manage.py             # CLI do Django, um script de linha de comando para tarefas administrativas do Django
+└── requirements.txt    # Lista de pacotes Python necessários para o projeto
 ```
 
 
